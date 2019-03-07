@@ -1,0 +1,23 @@
+{
+  "name": "js-clock",
+  "version": "1.0.0",
+  "description": "Clock that created using vailla javascript and css",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "css",
+    "clock"
+  ],
+  "author": "kMatthews",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "global": "^4.3.2",
+    "lite-server": "^2.4.0"
+  }
+}
