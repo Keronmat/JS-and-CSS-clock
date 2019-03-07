@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron");
+
 body {
-  background: url("../img/background.jpg");
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 section {
   width: 80vmin;
@@ -23,7 +29,7 @@ section:before {
   border-radius: 50%;
   display: block;
   background: transparent;
-  border: 2vmin solid rgb(238, 227, 189);
+  border: 2vmin solid #d7c3a1;
 }
 
 section:after {
@@ -37,6 +43,44 @@ section:after {
   top: -2.5%;
   left: -2.5%;
   box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.8);
+}
+
+.digital {
+  position: absolute;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  justify-content: stretch;
+  align-items: stretch;
+  bottom: 20vmin;
+  left: 30vmin;
+  height: 7vmin;
+  width: 20vmin;
+  border: none;
+  outline: none;
+  font-family: "Orbitron", sans-serif;
+  transition: all 0.05s;
+}
+
+.time,
+.amPm {
+  height: 100%;
+  box-shadow: inset 0px 1px 8px #785537;
+  color: #db0000;
+  padding: auto;
+  text-align: center;
+  vertical-align: center;
+}
+.time {
+  background-color: black;
+  border-right: 1px solid #381c00;
+  font-size: 1.5em;
+  padding: 0 2px 0 2px;
+}
+.amPm {
+  color: #ffffff;
+  font-size: 1.7em;
+  padding: 0 2px 0 2px;
+  background: rgba(0, 0, 0, 0.5);
 }
 .hourhand,
 .secondhand,
@@ -71,7 +115,7 @@ section:after {
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.4);
 }
 .minutehand {
-  width: 40vmin;
+  width: 35vmin;
   height: 1vmin;
   top: 40.5vmin;
   transform: rotate(270deg);
@@ -105,6 +149,7 @@ section:after {
   transform: rotate(270deg);
   transform-origin: 11.5%;
   box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(to right, #381c00, #db0000);
   transition: all 0.05s ease-out;
 }
 .secondhand:after {
