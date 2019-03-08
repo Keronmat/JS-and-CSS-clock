@@ -115,11 +115,11 @@ section:after {
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.4);
 }
 .minutehand {
-  width: 35vmin;
+  width: 31vmin;
   height: 1vmin;
   top: 40.5vmin;
   transform: rotate(270deg);
-  transform-origin: 10%;
+  transform-origin: 12%;
   transition: all 0.05s;
   border-top-right-radius: 30%;
   border-bottom-right-radius: 30%;
@@ -143,14 +143,13 @@ section:after {
 }
 
 .secondhand {
-  width: 35vmin;
+  width: 33vmin;
   height: 0.5vmin;
   top: 40.75vmin;
   transform: rotate(270deg);
   transform-origin: 11.5%;
   box-shadow: -10px -10px 10px rgba(0, 0, 0, 0.4);
   background-image: linear-gradient(to right, #381c00, #db0000);
-  transition: all 0.05s ease-out;
 }
 .secondhand:after {
   top: -2.25vmin;

@@ -33,7 +33,7 @@ const setTime = () => {
   const timeOfTheDay = hours < 12 || hours === 24 ? "AM" : "PM";
   amPm.innerHTML = timeOfTheDay;
   changeBackGroundImg(hours);
-  //playSound();
+  playSound();
 };
 
 // convert 24 hours time to 12 hour time
@@ -63,9 +63,8 @@ function playSound() {
 
   if (!audio) return;
   audio.currentTime = 0;
+  audio.volume = 0.01;
   audio.play();
 }
 setInterval(setTime, 1000);
-
-//adjust transition when it reaches 60
-// add ticking sound
+//change style of clock
