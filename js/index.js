@@ -47,13 +47,17 @@ const changeBackGroundImg = hours => {
   const body = document.querySelector("body");
 
   if (hours >= 6 && hours < 12) {
-    body.style.backgroundImage = "url('../img/morning.jpg')";
+    body.style.backgroundImage =
+      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/morning.jpg?raw=true')";
   } else if (hours >= 12 && hours < 17) {
-    body.style.backgroundImage = "url('../img/afternoon.jpg')";
+    body.style.backgroundImage =
+      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/afternoon.jpg?raw=true')";
   } else if (hours >= 17 && hours < 22) {
-    body.style.backgroundImage = "url('../img/evening.jpg')";
+    body.style.backgroundImage =
+      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/evening.jpg?raw=true')";
   } else {
-    body.style.backgroundImage = "url('../img/night.jpg')";
+    body.style.backgroundImage =
+      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/night.jpg?raw=true')";
   }
 };
 
@@ -63,7 +67,7 @@ function playSound() {
 
   if (!audio) return;
   audio.currentTime = 0;
-  audio.volume = 0.01;
+  audio.volume = 0.5;
   audio.play();
 }
 setInterval(setTime, 1000);
