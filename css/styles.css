@@ -7,7 +7,7 @@
   --ltGray: #bfb2a6;
   --platinum: #e2e2e2;
   --gold: #f7c390;
-  --alarmOn: #ffd311;
+  --alarmOn: #d8c63a;
 }
 
 @font-face {
@@ -90,7 +90,6 @@ body {
   height: 100%;
   box-shadow: inset 0px 1px 8px #785537;
   color: #db0000;
-  padding: auto;
   text-align: center;
   vertical-align: center;
 }
@@ -245,8 +244,8 @@ body {
     40px 40px 60px rgba(247, 195, 144, 0.5);
   box-shadow: inset 40px 40px 90px rgba(169, 157, 148, 1),
     inset 10px 10px 30px rgba(48, 45, 49, 0.5),
-    20px 20px 30px rgba(48, 45, 49, 0.4),
-    40px 40px 60px rgba(247, 195, 144, 0.5);
+    10px 10px 30px rgba(48, 45, 49, 0.4),
+    10px 10px 60px rgba(247, 195, 144, 0.5);
   z-index: 1;
 }
 
@@ -260,9 +259,9 @@ body {
   position: absolute;
   top: -3.4%;
   left: -2.3%;
-  -webkit-box-shadow: -2px -3px 9px rgba(247, 195, 144, 1);
-  -moz-box-shadow: -2px -3px 9px rgba(247, 195, 144, 1);
-  box-shadow: -2px -3px 9px rgba(247, 195, 144, 1);
+  -webkit-box-shadow: -2px -3px 9px rgba(247, 195, 144, 0.7);
+  -moz-box-shadow: -2px -3px 9px rgba(247, 195, 144, 0.7);
+  box-shadow: -2px -3px 9px rgba(247, 195, 144, 0.7);
 }
 .digital-time {
   font-family: "digital-clock-font";
@@ -397,7 +396,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .fa-check-circle {
   color: green;
   font-size: 3vmin;
-  transition: all 0.5;
+  transition: all 0.5s;
 }
 
 #alarmOptions {

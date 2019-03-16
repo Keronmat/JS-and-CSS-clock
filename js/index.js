@@ -231,7 +231,7 @@ function playSound() {
 
   if (!audio) return;
   audio.currentTime = 0;
-  audio.volume = 0.0;
+  audio.volume = 0.02;
   audio.play();
 }
 setInterval(setTime, 1000);
