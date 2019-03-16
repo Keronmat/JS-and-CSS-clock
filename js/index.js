@@ -215,17 +215,13 @@ const changeBackGroundImg = hours => {
   const body = document.querySelector("body");
 
   if (hours >= 6 && hours < 12) {
-    body.style.backgroundImage =
-      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/morning.jpg?raw=true')";
+    body.style.backgroundImage = "url('../img/morning.jpg')";
   } else if (hours >= 12 && hours < 17) {
-    body.style.backgroundImage =
-      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/afternoon.jpg?raw=true')";
+    body.style.backgroundImage = "url('../img/afternoon.jpg')";
   } else if (hours >= 17 && hours < 22) {
-    body.style.backgroundImage =
-      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/evening.jpg?raw=true')";
+    body.style.backgroundImage = "url('../img/evening.jpg')";
   } else {
-    body.style.backgroundImage =
-      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/night.jpg?raw=true')";
+    body.style.backgroundImage = "url('../img/night.jpg')";
   }
 };
 
@@ -235,8 +231,23 @@ function playSound() {
 
   if (!audio) return;
   audio.currentTime = 0;
-  audio.volume = 0.2;
+  audio.volume = 0.0;
   audio.play();
 }
 setInterval(setTime, 1000);
 //change style of clock
+
+/*
+if (hours >= 6 && hours < 12) {
+  body.style.backgroundImage =
+    "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/morning.jpg?raw=true')";
+} else if (hours >= 12 && hours < 17) {
+  body.style.backgroundImage =
+    "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/afternoon.jpg?raw=true')";
+} else if (hours >= 17 && hours < 22) {
+  body.style.backgroundImage =
+    "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/evening.jpg?raw=true')";
+} else {
+  body.style.backgroundImage =
+    "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/night.jpg?raw=true')";
+}*/

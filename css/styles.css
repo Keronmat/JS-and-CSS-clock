@@ -32,6 +32,12 @@ body {
   border: 3vmin solid #000;
   border-radius: 50%;
   margin-top: 3vmin;
+  -moz-box-shadow: inset 40px 40px 90px rgba(0, 0, 0, 0.2),
+    inset 10px 10px 30px rgba(0, 0, 0, 0.5), 20px 20px 30px rgba(0, 0, 0, 0.4),
+    40px 40px 60px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 40px 40px 90px rgba(0, 0, 0, 0.2),
+    inset 10px 10px 30px rgba(0, 0, 0, 0.5), 20px 20px 30px rgba(0, 0, 0, 0.4),
+    40px 40px 60px rgba(0, 0, 0, 0.4);
   box-shadow: inset 40px 40px 90px rgba(0, 0, 0, 0.2),
     inset 10px 10px 30px rgba(0, 0, 0, 0.5), 20px 20px 30px rgba(0, 0, 0, 0.4),
     40px 40px 60px rgba(0, 0, 0, 0.4);
@@ -58,6 +64,8 @@ body {
   position: absolute;
   top: -2.5%;
   left: -2.5%;
+  -moz-box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.8);
   box-shadow: -3px -3px 9px rgba(255, 255, 255, 0.8);
 }
 
@@ -129,6 +137,8 @@ body {
   border-top-right-radius: 20%;
   border-bottom-right-radius: 20%;
   transform: rotate(270deg);
+  -webkit-box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.4);
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.4);
 }
 .minutehand {
@@ -140,6 +150,8 @@ body {
   transition: all 0.05s;
   border-top-right-radius: 30%;
   border-bottom-right-radius: 30%;
+  -webkit-box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.4);
   box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
@@ -152,6 +164,8 @@ body {
   position: absolute;
   top: -1.7vmin;
   left: 1.7vmin;
+  -webkit-box-shadow: -2px -2px 7px rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: -2px -2px 7px rgba(255, 255, 255, 0.6);
   box-shadow: -2px -2px 7px rgba(255, 255, 255, 0.6);
 }
 
@@ -221,6 +235,14 @@ body {
   border: 3vmin solid #302d31;
   border-radius: 15%;
   position: relative;
+  -webkit-box-shadow: inset 40px 40px 90px rgba(169, 157, 148, 1),
+    inset 10px 10px 30px rgba(48, 45, 49, 0.5),
+    20px 20px 30px rgba(48, 45, 49, 0.4),
+    40px 40px 60px rgba(247, 195, 144, 0.5);
+  -moz-box-shadow: inset 40px 40px 90px rgba(169, 157, 148, 1),
+    inset 10px 10px 30px rgba(48, 45, 49, 0.5),
+    20px 20px 30px rgba(48, 45, 49, 0.4),
+    40px 40px 60px rgba(247, 195, 144, 0.5);
   box-shadow: inset 40px 40px 90px rgba(169, 157, 148, 1),
     inset 10px 10px 30px rgba(48, 45, 49, 0.5),
     20px 20px 30px rgba(48, 45, 49, 0.4),
@@ -238,7 +260,9 @@ body {
   position: absolute;
   top: -3.4%;
   left: -2.3%;
-  box-shadow: -4px -8px 9px rgba(247, 195, 144, 1);
+  -webkit-box-shadow: -2px -3px 9px rgba(247, 195, 144, 1);
+  -moz-box-shadow: -2px -3px 9px rgba(247, 195, 144, 1);
+  box-shadow: -2px -3px 9px rgba(247, 195, 144, 1);
 }
 .digital-time {
   font-family: "digital-clock-font";
@@ -394,6 +418,7 @@ input[type="number"]::-webkit-outer-spin-button {
   transform: scale(1.5);
   /* Styling for the digital clock ends*/
 }
+/*shakes the bell when alarm goes off*/
 .alarmGoing {
   animation: shake 0.82s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
