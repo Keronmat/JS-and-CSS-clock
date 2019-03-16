@@ -1,32 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags always come first -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Javascript and css clock" />
+    <link rel="icon" href="./logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
     />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <link href="css/styles.css" rel="stylesheet" />
     <title>JS and CSS Clock</title>
   </head>
   <body>
-    <section class="clock">
-      <div class="digital">
-        <div class="time"></div>
-        <div class="amPm"></div>
+    <section class="container">
+      <div class="analog-clock">
+        <div class="digital">
+          <div class="time"></div>
+          <div class="amPm"></div>
+        </div>
+        <div class="hourhand"></div>
+        <div class="secondhand"></div>
+        <div class="minutehand"></div>
+        <div class="hour12"></div>
+        <div class="hour1"></div>
+        <div class="hour2"></div>
+        <div class="hour3"></div>
+        <div class="hour4"></div>
+        <div class="hour5"></div>
       </div>
-      <div class="hourhand"></div>
-      <div class="secondhand"></div>
-      <div class="minutehand"></div>
-      <div class="hour12"></div>
-      <div class="hour1"></div>
-      <div class="hour2"></div>
-      <div class="hour3"></div>
-      <div class="hour4"></div>
-      <div class="hour5"></div>
+      <div class="digital-clock">
+        <div class="digital-time"></div>
+        <div class="digital-seconds"></div>
+        <div class="digital-weekdays">
+          <span class="">SUN</span>
+          <span class="">MON</span>
+          <span class="">TUE</span>
+          <span class="">WED</span>
+          <span class="">THU</span>
+          <span class="">FRI</span>
+          <span class="">SAT</span>
+        </div>
+        <div class="digital-amPm">
+          <span id="am" class="">AM</span>
+          <span id="pm" class="">PM</span>
+        </div>
+        <div class="digital-alarm">
+          <span class="open-alarm"><i class="far fa-bell "></i></span>
+        </div>
+        <form class="alarm-details">
+          <label for="alarmTime">set alarm:</label>
+          <input type="datetime-local" id="alarmTime" />
+          <a id="alarmButton">
+            <i class="far fa-check-circle"></i>
+          </a>
+          <div id="alarmOptions">
+            <a class="snoozeButton">
+              <i class="fas fa-business-time"></i>
+            </a>
+            <a class="close-alarm">
+              <i class="far fa-bell-slash"></i>
+            </a>
+          </div>
+        </form>
+
+        <div class="digital-date">1</div>
+      </div>
     </section>
-    <audio src="audio/clock-tick1.wav"></audio>
+
+    <audio id="tickingSound" src="audio/clock-tick1.wav"></audio>
+    <audio id="alarmSound" src="audio/alarm.mp3"></audio>
     <script src="js/index.js"></script>
   </body>
 </html>

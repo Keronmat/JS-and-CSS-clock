@@ -1,4 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Orbitron");
+@import url("https://fonts.googleapis.com/css?family=Orbitron:400,500");
+
+:root {
+  --mainWhite: #fffeff;
+  --mainBlack: #302d31;
+  --dkGray: #a99d94;
+  --ltGray: #bfb2a6;
+  --platinum: #e2e2e2;
+  --gold: #f7c390;
+  --alarmOn: #ffd311;
+}
+
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("../fonts/digital-7.ttf");
+}
 
 body {
   background-image: url("");
@@ -7,7 +22,8 @@ body {
   background-position: center;
   background-size: cover;
 }
-section {
+/* Styling for the analog clock starts*/
+.analog-clock {
   width: 80vmin;
   height: 80vmin;
   margin: auto;
@@ -22,7 +38,7 @@ section {
   position: relative;
   z-index: 1;
 }
-section:before {
+.analog-clock:before {
   content: "";
   width: 95%;
   height: 95%;
@@ -32,7 +48,7 @@ section:before {
   border: 2vmin solid #d7c3a1;
 }
 
-section:after {
+.analog-clock:after {
   content: "";
   width: 105%;
   height: 105%;
@@ -76,6 +92,7 @@ section:after {
   font-size: 1.5em;
   padding: 0 2px 0 2px;
 }
+
 .amPm {
   color: #ffffff;
   font-size: 1.7em;
@@ -190,4 +207,232 @@ section:after {
 
 .hour5 {
   transform: rotate(240deg) translate(17vmin, -30vmin);
+}
+/* Styling for the analog clock ends*/
+
+/* Styling for the digital clock start*/
+
+.digital-clock {
+  width: 80vmin;
+  height: 30vmin;
+  background-color: var(--ltGray);
+  margin: 20vmin auto;
+  text-align: center;
+  border: 3vmin solid #302d31;
+  border-radius: 15%;
+  position: relative;
+  box-shadow: inset 40px 40px 90px rgba(169, 157, 148, 1),
+    inset 10px 10px 30px rgba(48, 45, 49, 0.5),
+    20px 20px 30px rgba(48, 45, 49, 0.4),
+    40px 40px 60px rgba(247, 195, 144, 0.5);
+  z-index: 1;
+}
+
+.digital-clock:before {
+  content: "";
+  width: 105%;
+  height: 110%;
+  border-radius: 10%;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: -3.4%;
+  left: -2.3%;
+  box-shadow: -4px -8px 9px rgba(247, 195, 144, 1);
+}
+.digital-time {
+  font-family: "digital-clock-font";
+  color: #fffeff;
+  font-size: 15vmin;
+  position: absolute;
+  top: 8vmin;
+  left: 10vmin;
+}
+.digital-seconds {
+  font-family: "digital-clock-font";
+  color: #fffeff;
+  font-size: 5vmin;
+  position: absolute;
+  bottom: 9vmin;
+  left: 30vmin;
+  margin-left: 7vmin;
+  transition: all 0.5s;
+}
+.digital-amPm {
+  color: #e2e2e2;
+  font-size: 2.5vmin;
+  position: absolute;
+  bottom: 10vmin;
+  right: 15vmin;
+  padding: 1vmin;
+  margin: 1vmin auto;
+  font-family: "digital-clock-font";
+  transition: all 0.5s;
+}
+.digital-am {
+  color: #fffeff;
+  font-size: 3vmin;
+}
+.digital-pm {
+  color: #fffeff;
+  font-size: 5vmin;
+}
+.digital-weekdays {
+  color: #e2e2e2;
+  font-size: 3vmin;
+  position: absolute;
+  top: 2.5vmin;
+  left: 6vmin;
+  padding: 0;
+  margin: 0.5vmin auto;
+  transition: all 0.5s;
+}
+.digital-weekdays > span {
+  margin: 1vmin;
+}
+.digital-alarm {
+  position: absolute;
+  bottom: 0.5vmin;
+  left: 6.5vmin;
+  padding: 1vmin;
+  margin: 1vmin auto;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.digital-date {
+  color: var(--mainWhite);
+  font-size: 2.5vmin;
+  position: absolute;
+  top: 0vmin;
+  left: 30vmin;
+  padding: 0;
+  margin: 0.5vmin auto;
+  transition: all 0.5s;
+}
+.today {
+  font-size: 4vmin;
+  color: var(--mainWhite);
+  text-decoration: underline;
+}
+.fa-bell-slash {
+  font-size: 3vmin;
+  color: red;
+}
+.fa-bell {
+  font-size: 3vmin;
+  color: var(--platinum);
+}
+.close-alarm {
+  margin: 0.5vmin;
+  display: none;
+  cursor: pointer;
+}
+.open-alarm {
+  margin: 0.5vmin;
+}
+.fa-bell:hover {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari */
+  transform: scale(2);
+}
+.alarm-details {
+  position: absolute;
+  bottom: 1vmin;
+  left: 12vmin;
+  margin: 1vmin auto;
+  text-transform: capitalize;
+  color: var(--mainWhite);
+  font-weight: bold;
+  display: none;
+}
+.alarm-details > label {
+  font-size: 2vmin;
+  color: var(--platinum);
+}
+.alarm-details > #alarmTime {
+  background-color: #9e7c5b;
+  color: var(--mainWhite);
+  width: 33vmin;
+  height: 3.5vmin;
+  margin: 0.5vmin auto;
+  outline: none;
+}
+
+/*
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}*/
+#alarmButton {
+  background-color: transparent;
+  margin: 1vmin;
+  border: none;
+  cursor: pointer;
+}
+.fa-check-circle {
+  color: green;
+  font-size: 3vmin;
+  transition: all 0.5;
+}
+
+#alarmOptions {
+  display: none;
+}
+#alarmOptions > i {
+  margin: 1vmin;
+}
+.fa-business-time {
+  color: blue;
+  cursor: pointer;
+}
+.fa-business-time:hover,
+.fa-check-circle:hover,
+.fa-bell-slash:hover {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari */
+  transform: scale(1.5);
+  /* Styling for the digital clock ends*/
+}
+.alarmGoing {
+  animation: shake 0.82s infinite cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
 }
