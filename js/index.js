@@ -213,15 +213,18 @@ closeAlarm.addEventListener("click", stopCancelAlarm);
 // changes background image depending the hour of the day
 const changeBackGroundImg = hours => {
   const body = document.querySelector("body");
-
   if (hours >= 6 && hours < 12) {
-    body.style.backgroundImage = "url('../img/morning.jpg')";
+    body.style.backgroundImage =
+      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/morning.jpg?raw=true')";
   } else if (hours >= 12 && hours < 17) {
-    body.style.backgroundImage = "url('../img/afternoon.jpg')";
+    body.style.backgroundImage =
+      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/afternoon.jpg?raw=true')";
   } else if (hours >= 17 && hours < 22) {
-    body.style.backgroundImage = "url('../img/evening.jpg')";
+    body.style.backgroundImage =
+      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/evening.jpg?raw=true')";
   } else {
-    body.style.backgroundImage = "url('../img/night.jpg')";
+    body.style.backgroundImage =
+      "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/night.jpg?raw=true')";
   }
 };
 
@@ -238,16 +241,12 @@ setInterval(setTime, 1000);
 //change style of clock
 
 /*
-if (hours >= 6 && hours < 12) {
-  body.style.backgroundImage =
-    "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/morning.jpg?raw=true')";
-} else if (hours >= 12 && hours < 17) {
-  body.style.backgroundImage =
-    "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/afternoon.jpg?raw=true')";
-} else if (hours >= 17 && hours < 22) {
-  body.style.backgroundImage =
-    "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/evening.jpg?raw=true')";
-} else {
-  body.style.backgroundImage =
-    "url('https://github.com/Keronmat/JS-and-CSS-clock/blob/master/img/night.jpg?raw=true')";
-}*/
+ if (hours >= 6 && hours < 12) {
+    body.style.backgroundImage = "url('../img/morning.jpg')";
+  } else if (hours >= 12 && hours < 17) {
+    body.style.backgroundImage = "url('../img/afternoon.jpg')";
+  } else if (hours >= 17 && hours < 22) {
+    body.style.backgroundImage = "url('../img/evening.jpg')";
+  } else {
+    body.style.backgroundImage = "url('../img/night.jpg')";
+  }*/
